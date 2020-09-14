@@ -12,7 +12,7 @@ from resources.store import Store, StoreList
 
 app = Flask(__name__)
 
-app.confid['DEBUG'] = True
+app.config['DEBUG'] = True
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///data.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
