@@ -1,5 +1,5 @@
 from flask_restful import Resource, reqparse
-from pyhtonProject4.models import UserModel
+from models.user import UserModel
 
 
 class Userregister(Resource):

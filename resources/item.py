@@ -1,6 +1,6 @@
 from flask_restful import Resource, reqparse
 from flask_jwt import jwt_required
-from pyhtonProject4.models.item import ItemModel
+from models.item import ItemModel
 
 
 class Item(Resource):
@@ -37,7 +37,7 @@ class Item(Resource):
          try:
              item.save_to_db()
          except:
-             return {"mesaage" : "an error occured inserting"}, 500
+             return {"message": "an error occured inserting"}, 500
 
          return item.json(),201
 
